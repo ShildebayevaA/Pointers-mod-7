@@ -17,11 +17,12 @@ void Copy_str_dir(char *a, char *b)
 //-----------------------------------------------------
 void Copy_str_inv(char *a, char *b, int c)
 {
-	while (*a != '\0')
+	int d = c;
+	for(int i=0;i<c;i++)
 	{
-		*b = *(a + c);
+		*b = *(a + d-1);
 		b++;
-		c--;
+		d--;
 	}
 }
 // -----------------------------------------------------------
@@ -29,7 +30,7 @@ void Print_cnt(char*b, int c)
 {
 	for (int i = 0; i < c; i++)
 	{
-		cout << *b;
+		printf("%c", *b);
 		b++;
 	}
 	printf("\n");
